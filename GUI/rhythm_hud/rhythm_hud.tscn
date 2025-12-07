@@ -1,0 +1,74 @@
+[gd_scene load_steps=2 format=3 uid="uid://buh8vhxj8w7m8"]
+
+[ext_resource type="Script" path="res://GUI/rhythm_hud/rhythm_hud.gd" id="1_8vxk8"]
+
+[node name="RhythmHUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1_8vxk8")
+
+[node name="BeatIndicator" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -120.0
+offset_top = 20.0
+offset_right = -40.0
+offset_bottom = 100.0
+texture = preload("res://GUI/rhythm_hud/beat_indicator.png")
+expand_mode = 1
+
+[node name="BeatBar" type="ProgressBar" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -120.0
+offset_top = 110.0
+offset_right = -40.0
+offset_bottom = 120.0
+max_value = 100.0
+value = 0.0
+tint_progress = Color(1, 1, 1, 0.8)
+
+[node name="PerfectIndicator" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -100.0
+offset_top = 130.0
+offset_right = -60.0
+offset_bottom = 170.0
+texture = preload("res://GUI/rhythm_hud/perfect_star.png")
+modulate = Color(1, 1, 1, 0)
+
+[node name="ComboLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -120.0
+offset_top = 180.0
+offset_right = -40.0
+offset_bottom = 200.0
+text = "COMBO x0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RhythmStatus" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -120.0
+offset_top = 205.0
+offset_right = -40.0
+offset_bottom = 225.0
+text = "BPM: 120"
+horizontal_alignment = 1
+vertical_alignment = 1
