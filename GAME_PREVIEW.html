@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AARPG Tutorial - Game Preview</title>
+    <style>
+        body {
+            font-family: 'Abaddon Light', Arial, sans-serif;
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(0,0,0,0.7);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        h1 {
+            text-align: center;
+            font-size: 3em;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 1.2em;
+            color: #bdc3c7;
+            margin-bottom: 40px;
+        }
+        .game-screenshot {
+            width: 100%;
+            max-width: 800px;
+            height: 450px;
+            background: #34495e;
+            margin: 20px auto;
+            display: block;
+            border-radius: 10px;
+            border: 3px solid #3498db;
+            position: relative;
+            overflow: hidden;
+        }
+        .title-screen {
+            background: linear-gradient(45deg, #8e44ad, #9b59b6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .play-button {
+            background: #e74c3c;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.5em;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 10px;
+            transition: all 0.3s;
+        }
+        .play-button:hover {
+            background: #c0392b;
+            transform: scale(1.05);
+        }
+        .section {
+            margin: 30px 0;
+            padding: 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            border-left: 5px solid #3498db;
+        }
+        .section h2 {
+            color: #3498db;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .controls-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .control-card {
+            background: rgba(52, 152, 219, 0.2);
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #3498db;
+        }
+        .ability-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .ability-item {
+            background: #e67e22;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+        .quest-steps {
+            background: rgba(241, 196, 15, 0.2);
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #f1c40f;
+        }
+        .tech-stack {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        .tech-item {
+            background: rgba(46, 204, 113, 0.2);
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            border: 1px solid #2ecc71;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎮 AARPG TUTORIAL</h1>
+        <div class="subtitle">Action-Adventure RPG • Godot 4.5 • Top-Down 2D</div>
+        
+        <div class="game-screenshot title-screen">
+            <h2>Game Preview Ready</h2>
+            <p>Your game is ready to play! Open in Godot Engine and press F5</p>
+            <button class="play-button" onclick="showGameplay()">▶️ Start Game Preview</button>
+        </div>
+
+        <div class="section">
+            <h2>🎯 Game Overview</h2>
+            <p>A fully-featured 2D Action-Adventure RPG inspired by classic Zelda-style gameplay. Built with Godot 4.5 using professional game development practices and modular architecture.</p>
+            
+            <div class="quest-steps">
+                <h3>📜 Main Quest: "Recover Lost Magical Flute"</h3>
+                <ol>
+                    <li><strong>Find the Cave Entrance</strong> - Locate dungeon access</li>
+                    <li><strong>Find the Magical Flute</strong> - Search Dungeon01</li>
+                    <li><strong>Return to Nero</strong> - Complete quest & receive rewards</li>
+                </ol>
+                <p><strong>Rewards:</strong> 100 XP, 100 Gems, 5 Potions</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>⚔️ Combat & Abilities</h2>
+            <p>Choose from 6 different combat and utility abilities:</p>
+            
+            <div class="ability-list">
+                <span class="ability-item">🗡️ Sword (Melee)</span>
+                <span class="ability-item">🏹 Bow & Arrows</span>
+                <span class="ability-item">💣 Bombs</span>
+                <span class="ability-item">🪃 Boomerang</span>
+                <span class="ability-item">🪝 Grapple</span>
+                <span class="ability-item">💨 Dash</span>
+            </div>
+            
+            <div class="controls-grid">
+                <div class="control-card">
+                    <h4>🕹️ Movement</h4>
+                    <p>Arrow Keys / WASD<br>Gamepad Left Stick</p>
+                </div>
+                <div class="control-card">
+                    <h4>⚔️ Attack</h4>
+                    <p>X Key / Left Mouse<br>Gamepad A Button</p>
+                </div>
+                <div class="control-card">
+                    <h4>🔧 Use Ability</h4>
+                    <p>Z Key<br>Gamepad X Button</p>
+                </div>
+                <div class="control-card">
+                    <h4>💬 Interact</h4>
+                    <p>C Key<br>Gamepad B Button</p>
+                </div>
+                <div class="control-card">
+                    <h4>⏸️ Pause</h4>
+                    <p>Escape Key<br>Gamepad Start</p>
+                </div>
+                <div class="control-card">
+                    <h4>💨 Dash</h4>
+                    <p>Shift Key<br>Gamepad Right Bumper</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🗺️ World & Areas</h2>
+            <h3>Area01 (Overworld)</h3>
+            <ul>
+                <li><strong>Level 1:</strong> Tutorial area with basic interactions</li>
+                <li><strong>Level 2:</strong> Main hub with NPCs, shops, and quest givers</li>
+                <li><strong>Level 3:</strong> Advanced area with puzzles and enemies</li>
+                <li><strong>Level 4:</strong> Cutscene and story progression</li>
+            </ul>
+            
+            <h3>Dungeon01 (Underground)</h3>
+            <p>Maze-like underground dungeon where the magical flute is hidden. Features combat encounters, puzzle-solving, and treasure chests.</p>
+        </div>
+
+        <div class="section">
+            <h2>🎨 Visual Design</h2>
+            <div class="tech-stack">
+                <div class="tech-item">
+                    <strong>Resolution:</strong><br>480×270 (scaled to 1440×810)
+                </div>
+                <div class="tech-item">
+                    <strong>Style:</strong><br>Pixel Art 2D
+                </div>
+                <div class="tech-item">
+                    <strong>Perspective:</strong><br>Top-Down View
+                </div>
+                <div class="tech-item">
+                    <strong>Font:</strong><br>Abaddon Light
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🔧 Technical Architecture</h2>
+            <p>Professional Godot 4.5 project with modern development practices:</p>
+            
+            <div class="tech-stack">
+                <div class="tech-item">
+                    <strong>State Machines</strong><br>Player behavior management
+                </div>
+                <div class="tech-item">
+                    <strong>Autoload Singletons</strong><br>Global game systems
+                </div>
+                <div class="tech-item">
+                    <strong>Resource Management</strong><br>Modular asset system
+                </div>
+                <div class="tech-item">
+                    <strong>Save/Load System</strong><br>Persistent gameplay
+                </div>
+                <div class="tech-item">
+                    <strong>Quest Engine</strong><br>Data-driven quests
+                </div>
+                <div class="tech-item">
+                    <strong>Dialog System</strong><br>Branching conversations
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🚀 How to Play</h2>
+            <ol>
+                <li><strong>Install Godot Engine 4.5</strong> from godotengine.org</li>
+                <li><strong>Open Project:</strong> Import the project folder</li>
+                <li><strong>Wait for Import:</strong> Let Godot import all resources</li>
+                <li><strong>Press F5:</strong> Start playing!</li>
+            </ol>
+            
+            <div style="background: rgba(231, 76, 60, 0.3); padding: 15px; border-radius: 8px; border: 1px solid #e74c3c; margin: 20px 0;">
+                <h3>⚠️ Important Notes</h3>
+                <p>The project requires first-time resource import when opened in Godot. This is normal and will happen automatically.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📊 Project Statistics</h2>
+            <ul>
+                <li><strong>6 Player Abilities</strong> with unique mechanics</li>
+                <li><strong>5 Game Areas</strong> with unique challenges</li>
+                <li><strong>Complete Quest System</strong> with NPCs and rewards</li>
+                <li><strong>Save/Load Functionality</strong> for persistent progress</li>
+                <li><strong>Professional Code Structure</strong> following Godot best practices</li>
+                <li><strong>Full Audio/Visual Assets</strong> for immersive experience</li>
+            </ul>
+        </div>
+
+        <div style="text-align: center; margin: 40px 0; padding: 20px; background: rgba(46, 204, 113, 0.2); border-radius: 10px;">
+            <h2>🎮 Ready to Play!</h2>
+            <p>Your AARPG Tutorial is a complete, professional-quality game ready for players!</p>
+            <p style="font-size: 0.9em; color: #bdc3c7;">Built with Godot 4.5 • Tutorial Series by Michael Games</p>
+        </div>
+    </div>
+
+    <script>
+        function showGameplay() {
+            document.querySelector('.title-screen').innerHTML = `
+                <h2>🎮 Gameplay Preview</h2>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0;">
+                    <div style="background: #27ae60; padding: 20px; border-radius: 8px;">
+                        <h3>✅ Complete Systems</h3>
+                        <ul style="text-align: left;">
+                            <li>Player movement & combat</li>
+                            <li>Quest progression</li>
+                            <li>NPC interactions</li>
+                            <li>Inventory management</li>
+                            <li>Save/load functionality</li>
+                        </ul>
+                    </div>
+                    <div style="background: #8e44ad; padding: 20px; border-radius: 8px;">
+                        <h3>🎯 Game Features</h3>
+                        <ul style="text-align: left;">
+                            <li>5 unique game areas</li>
+                            <li>6 combat abilities</li>
+                            <li>Multiple NPCs & dialogs</li>
+                            <li>Shop & trading system</li>
+                            <li>Equipment & upgrades</li>
+                        </ul>
+                    </div>
+                </div>
+                <p><strong>Open in Godot Engine to experience the full game!</strong></p>
+            `;
+        }
+    </script>
+</body>
+</html>
